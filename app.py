@@ -292,10 +292,19 @@ def chat_view():
         st.session_state.state = state
 
 def sidebar_content():
-    # Move the view selection to the top of the sidebar
-    view = st.radio("Select View", ["Punchcard", "Chat"], key="view_toggle", horizontal=True)
+    # Add logo image
+    st.image("logo.jpeg")
+    
+    # Add title and subtitle
+    st.title("20Pieces")
+    st.markdown("*Stand on the shoulder of investment giants*")
     
     st.markdown("<hr>", unsafe_allow_html=True)  # Add a separator
+    
+    # Move the view selection below the title and subtitle
+    view = st.radio("Select View", ["Punchcard", "Chat"], key="view_toggle", horizontal=True)
+    
+    st.markdown("<hr>", unsafe_allow_html=True)  # Add another separator
     
     if view == "Punchcard":
         add_investment_section(key_suffix="sidebar")
