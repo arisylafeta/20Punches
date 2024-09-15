@@ -1,0 +1,175 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1A1B41; /* Space Cadet */
+    color: #F1FFE7;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #BAFF29;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.punchcard-title {
+    font-size: 1.8rem;
+    color: #C2E7DA;
+    margin-bottom: 0.5rem;
+}
+
+.punchcard-description {
+    font-size: 1rem;
+    color: #F1FFE7;
+    margin-bottom: 1.5rem;
+}
+
+.punchcard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.punchcard-button {
+    aspect-ratio: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.punchcard-button.filled {
+    background-color: #6290C3; /* A brand color for filled slots */
+}
+
+.punchcard-button.empty {
+    background-color: #708090; /* Slate Grey */
+    opacity: 0.7;
+}
+
+.punchcard-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+}
+
+.add-icon {
+    font-size: 2rem;
+    color: #F1FFE7;
+}
+
+.progress-indicator {
+    font-size: 1rem;
+    color: #BAFF29;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.metrics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.metric-card {
+    background-color: #2c3e50;
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1 1 calc(25% - 1rem);
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.metric-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #C2E7DA;
+}
+
+.metric-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #BAFF29;
+}
+
+/* Custom toggle styling */
+.stRadio > div {
+    display: flex;
+    background-color: #2c3e50;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.stRadio > div > label {
+    flex: 1;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 18px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.stRadio > div > label[data-baseweb="radio"] > span {
+    display: none;
+}
+
+.stRadio > div > label[aria-checked="true"] {
+    background-color: #BAFF29;
+    color: #1A1B41;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .punchcard {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .punchcard-button {
+        font-size: 0.8rem;
+    }
+    
+    .metrics-container {
+        flex-direction: column;
+    }
+    
+    .metric-card {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .punchcard {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .metric-card {
+        flex: 1 1 calc(33.33% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .metric-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .metric-card {
+        flex: 1 1 100%;
+    }
+}
