@@ -130,7 +130,7 @@ starlette==0.37.2
 streamlit==1.38.0
 syncer==2.0.3
 tenacity==8.5.0
-tiktoken==0.7.0
+tiktoken==0.5.2
 toml==0.10.2
 tomli==2.0.1
 tornado==6.4.1
