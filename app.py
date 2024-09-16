@@ -296,7 +296,7 @@ def sidebar_content():
     st.image("logo.jpeg")
     
     # Add title and subtitle
-    st.title("20Pieces")
+    st.title("20Punches")
     st.markdown("*Stand on the shoulder of investment giants*")
     
     st.markdown("<hr>", unsafe_allow_html=True)  # Add a separator
