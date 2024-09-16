@@ -4,18 +4,13 @@ from docs_summarizer import retrieve_docs
 from ticker_extractor import extract_ticker
 from financial_analyst import execute_financial_analysis
 from buffet_bot import buffet_agent
-from langchain_core.runnables import Runnable, RunnableConfig
 import streamlit as st
-from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
-import asyncio
+
 from langchain_core.messages import AIMessage, HumanMessage
 import time
 import pandas as pd
 import yfinance as yf
 import plotly.graph_objects as go
-import base64
-import random
-import colorsys
 
 # Graph
 from langgraph.graph import StateGraph, END, START

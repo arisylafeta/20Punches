@@ -97,7 +97,8 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY").strip("__")
+
 
 model = ChatOpenAI(model="gpt-4o-mini", temperature=0, streaming=True)
 prompt = ChatPromptTemplate.from_template("""
