@@ -53,8 +53,8 @@ jsonschema-specifications==2023.12.1
 jupyter_client==8.6.2
 jupyter_core==5.7.2
 langchain==0.3.0
-langchain-community==0.2.16
-langchain-core==0.3.0
+langchain-community==0.0.16
+langchain-core==0.1.16
 langchain-openai==0.1.8
 langchain-text-splitters==0.3.0
 langgraph==0.2.21
@@ -131,7 +131,7 @@ starlette==0.37.2
 streamlit==1.38.0
 syncer==2.0.3
 tenacity==8.5.0
-tiktoken==0.7.0
+tiktoken==0.5.2
 toml==0.10.2
 tomli==2.0.1
 tornado==6.4.1
